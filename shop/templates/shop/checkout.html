@@ -5,6 +5,8 @@
 
     <div class="col my-4">
         <h2> Enter  & Other Details:</h2>
+        <br>
+
         <form method="post" action="/shop/checkout/">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
             <div class="form-row">
@@ -15,7 +17,9 @@
                 <div class="form-group col-md-6">
                     <label for="inputEmail">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <br>
                 </div>
+
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -29,11 +33,14 @@
                 <div class="form-group col-md-2">
                     <label for="inputSemester">Semester</label>
                     <input type="text" class="form-control" id="semester" name="semester">
+                    <br>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputZip">Phone Number</label>
                 <input type="tel" class="form-control" id="phone" name="phone">
+                <br>
+                <br>
             </div>
             <button type="submit" class="btn btn-primary">Place Order</button>
         </form>
@@ -71,6 +78,11 @@ $('#itemsJson').val(JSON.stringify(cart));
 alert('Thanks for ordering with us. Your order is is {{id}}. Use it to track your order using our order tracker');
 localStorage.clear();
 document.location = "/shop";
+
+
+background-color:pink;
+
 {% endif %}
 </script>
+
 {% endblock %}

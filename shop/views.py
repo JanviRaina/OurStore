@@ -49,8 +49,6 @@ def search(request):
         params = {'msg': "Please make sure to enter relevant search query"}
     return render(request, 'shop/search.html', params)
 
-
-
 def about(request):
     return render(request, 'shop/about.html')
 
@@ -67,14 +65,9 @@ def contact(request):
         contact.save()
     return render(request, 'shop/contact.html')
 
-#def tracker(request):
-  #  return render(request, 'shop/tracker.html')
-
-
 def productView(request, myid):
     # Fetch the product using the id
     product = Product.objects.filter(id=myid)
-
 
     return render(request, 'shop/prodView.html', {'product':product[0]})
 
@@ -90,7 +83,6 @@ def checkout(request):
         order = Order(items_json=items_json, name=name, email=email, branch=branch, batch=batch,
                        semester=semester, phone=phone)
         order.save()
-
         thank = True
         id = order.order_id
         return render(request, 'shop/checkout.html', {'thank':thank, 'id': id})

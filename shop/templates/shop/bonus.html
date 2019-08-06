@@ -1,4 +1,5 @@
 {% extends 'shop/basic.html' %}
+{% load static %}
 {% block title%}Everything About Us{% endblock %}
 {% block body %}
 
@@ -25,5 +26,13 @@
     </div>
   </div>
 </main>
+
+<style>
+    body
+    {
+    background:url('{% static "shop/picture/bg.jpg" %}') no-repeat center center fixed;
+    background-size:cover;
+    }
+</style>
 
 {% endblock %}
