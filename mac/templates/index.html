@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Typed.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <title>Techanvi store</title>
+      <body>
+  </head>
+  </body>
+      <style>
+		.footer {
+   		position: fixed;
+   		left: 0;
+   		bottom: 0;
+   		width: 100%;
+   		background-color: black;
+   		color: white;
+   		text-align: center;
+   		display: block;
+		}
+	</style>
+
+ <div class="jumbotron">
+  <h1 class="display-5">
+    The best place to find all ur essentials.
+  </h1>
+
+
+   <div class="container">
+  <div class="form-group">
+    <h3><span id="typed"></span></h3>
+  </div>
+  <a class="btn btn-primary btn-lg" href="/shop" role="button">Go To Store</a>
+</div>
+ <!-- Typed.js DONT TOUCH THIS! -->
+
+     <div class="container-fluid">
+           <hr class="my-2">
+  <img src="{% static 'shop/picture/vjti.jpg' %}"class="img-fluid" alt="Responsive image">
+</div>
+  </div>
+</div>
+  <script>
+     var typed = new Typed('#typed',{
+                    strings:["You can find anything  here!","Just get into the store to find all useful items !"],
+                    backSpeed: 15,
+                    smartBackspace: true,
+                    backDelay: 1200,
+                    startDelay: 1000,
+                    typeSpeed: 25,
+                    loop: false,
+                  });
+    </script>
+<footer class="footer">
+  <div class="container">
+    <span class="text-light">&#169 2019 Ourstore.in </span>
+  </div>
+</footer>
+  </body>
+</html>
