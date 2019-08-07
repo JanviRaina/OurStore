@@ -1,5 +1,5 @@
 {% extends 'shop/basic.html' %}
-{% block title%} Checkout - My Awesome Cart{% endblock %}
+{% block title%} Checkout - Our Store{% endblock %}
 {% block body %}
 <div class="container">
 
@@ -75,14 +75,10 @@ if ($.isEmptyObject(cart)) {
 document.getElementById('cart').innerHTML = sum;
 $('#itemsJson').val(JSON.stringify(cart));
 {% if thank %}
-alert('Thanks for ordering with us. Your order is is {{id}}. Use it to track your order using our order tracker');
+alert('Thanks for ordering with us. Your order is is {{id}});
 localStorage.clear();
 document.location = "/shop";
-
-
-background-color:pink;
-
 {% endif %}
 </script>
-
 {% endblock %}
+
