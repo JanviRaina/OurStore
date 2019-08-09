@@ -4,9 +4,8 @@
 <div class="container">
 
     <div class="col my-4">
-        <h2> Enter  & Other Details:</h2>
+        <h2> Enter Details:</h2>
         <br>
-
         <form method="post" action="/shop/checkout/">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
             <div class="form-row">
@@ -57,8 +56,7 @@ if (localStorage.getItem('cart') == null) {
 console.log(cart);
 var sum = 0;
 if ($.isEmptyObject(cart)) {
-    //if object is empty
-    mystr = `<p>Your cart is empty, please add some items to your cart before checking out!</p>`
+    mystr = `<p>Your cart is empty,please add some items to your cart before checking out!</p>`
     $('#items').append(mystr);
 } else {
     for (item in cart) {
@@ -75,7 +73,7 @@ if ($.isEmptyObject(cart)) {
 document.getElementById('cart').innerHTML = sum;
 $('#itemsJson').val(JSON.stringify(cart));
 {% if thank %}
-alert('Thanks for ordering with us. Your order is is {{id}});
+alert('Your order has been placed.Your order is is {{id}}');
 localStorage.clear();
 document.location = "/shop";
 {% endif %}
